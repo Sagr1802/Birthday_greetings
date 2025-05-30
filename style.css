@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #f8f9fa;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Balloon Background */
+.balloons {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.balloon {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  filter: blur(5px);
+  animation: float 15s linear infinite;
+  opacity: 0.6;
+}
+
+@keyframes float {
+  0% { transform: translateY(100vh) scale(0.5); }
+  100% { transform: translateY(-100vh) scale(1); }
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.header {
+  margin: 30px 0;
+}
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 4rem;
+  color: #ff6b6b;
+  text-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
+  margin-bottom: 10px;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #ff6b6b, 0 0 20px #ff6b6b; }
+  to { text-shadow: 0 0 15px #ff6b6b, 0 0 30px #ff6b6b, 0 0 40px #ff6b6b; }
+}
+
+.photo-frame {
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 5px solid white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wishes-container {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  margin: 30px 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  min-height: 200px;
+  overflow: hidden;
+}
+
+.wishes-wrapper {
+  position: relative;
+  height: 120px;
+}
+
+.wish {
+  position: absolute;
+  width: 100%;
+  margin: 20px 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  padding-left: 20px;
+  opacity: 0;
+  transition: all 0.8s ease;
+  left: 0;
+}
+
+.wish:before {
+  content: "❤️";
+  position: absolute;
+  left: -5px;
+}
+
+.wish.active {
+  opacity: 1;
+}
+
+.music-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  transition: transform 0.3s;
+}
+
+.music-btn:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2.8rem;
+  }
+  
+  .wish {
+    font-size: 1rem;
+  }
+}

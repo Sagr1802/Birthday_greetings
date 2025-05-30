@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday Piyush!</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Balloon Background -->
+    <div class="balloons" id="balloons"></div>
+
+    <!-- Hidden Audio -->
+    <audio id="birthdayAudio" loop>
+      <source src="assets/happy.mp3" type="audio/mpeg" />
+    </audio>
+
+    <button class="music-btn" id="musicBtn">🎵</button>
+
+    <div class="container">
+      <div class="header animate__animated animate__bounceInDown">
+        <h1>Happy Birthday Piyush!</h1>
+      </div>
+
+      <div class="photo-frame animate__animated animate__zoomIn">
+        <img src="assets/piyush1.jpg" alt="Piyush" />
+      </div>
+
+      <div class="wishes-container animate__animated animate__fadeInUp">
+        <div class="wishes-wrapper">
+          <div class="wish active">
+            To the most amazing younger brother - may your day be filled with
+            joy and laughter!
+          </div>
+          <div class="wish">
+            You bring so much light to our family - keep shining bright always!
+          </div>
+          <div class="wish">
+            Wishing you success in everything you do. Stay blessed my dear
+            brother!
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
